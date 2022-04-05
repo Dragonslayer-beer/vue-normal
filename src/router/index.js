@@ -54,7 +54,7 @@ const routes = [
   },
   {
     path:"*",
-    redirect:"/login"
+    redirect:"/login" // page mnot found
     
   }
 ];

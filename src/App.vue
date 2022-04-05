@@ -1,22 +1,21 @@
 <template>
-  <v-app>
-    <Header />
-    <Menu />
-   <Contend />
-
-  </v-app>
+  <v-App>
+    <Header v-if="$store.state.isLogged"/>
+    <Menu v-if="$store.state.isLogged"/>
+    <Content/>
+  </v-App>
 </template>
 
 <script>
-import Header from "@/components/core/Header.vue";
-import Menu from "@/components/core/Menu.vue";
-import Contend from "@/components/core/Contend.vue";
+import Header from "@/components/core/Header";
+import Menu from "@/components/core/Menu";
+import Content from "@/components/core/Content";
 export default {
   name: "App",
   components: {
     Header,
     Menu,
-    Contend
+    Content
   },
 };
 </script>
